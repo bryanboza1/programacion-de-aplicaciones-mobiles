@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button [routerLink]="['/index']"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-toolbar color="medium">
+    <label for="" style="color: white; margin-left: 12px;">Ingenieria en informatica</label>
+  </ion-toolbar>
+
+  <div *ngIf="scannedResult; else noscan">
+    <ion-card>
+      <ion-item color="primary">
+        <ion-label>programacion<br><sub>12:00 pm / 13:30 pm</sub></ion-label>
+        <ion-icon slot="end" name="checkmark-done-outline"></ion-icon>
+        <p>asistencia tomada</p>
+      </ion-item>
+      <form action="" hidden><ion-input type="text" [(ngModel)]="newasistencia.asistencia" [ngmodelOptions]="{standalone:true}">[{scannedResult}]</ion-input> </form>
+
+      <ion-button expand="block" color="warning" shape="round" (click)="creaasistencia()"><ion-icon slot="end" name="log-out-outline"></ion-icon>Confirmar asistencia</ion-button>
+
+    </ion-card>
+
+  </div>
+  
+  <ng-template #noscan>
+    <ion-card>
+      <ion-item color="primary">
+        <ion-label>programacion<br><sub>12:00 pm / 13:30 pm</sub></ion-label>
+        <ion-button  slot="end" color="warning" (click)="startScan()">QR</ion-button>
+      </ion-item>
+    </ion-card>
+  </ng-template>
+
+
+
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <img src="assets/img/footer.png" />
+  </ion-toolbar>
+</ion-footer>

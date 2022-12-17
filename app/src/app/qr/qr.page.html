@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" >
+      <ion-back-button [routerLink]="['/login']" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Generar QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark" [style.visibility]="content_visibility">
+  <ion-toolbar color="secondary">
+    <ion-title style="color: black;">Ingenieria en informatica</ion-title>
+  </ion-toolbar>
+
+ <p class="titulo">"dia y fecha" </p>
+ <p class="titulo"><sub>Genere un codigo "QR" para marcar la asistencia</sub></p>
+
+
+  <ion-card>
+    <ion-item color="primary">
+      <ion-label>programacion 003d<br><sub>12:00 pm / 13:30 pm</sub></ion-label>
+      <ion-button  slot="end" color="warning" (click)="generar()">Generar QR</ion-button>
+    </ion-item>
+  </ion-card>
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <img src="assets/img/footer.png" />
+  </ion-toolbar>
+</ion-footer>

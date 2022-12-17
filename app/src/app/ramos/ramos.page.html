@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" >
+      <ion-back-button [routerLink]="['/index']" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>ramos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-content class="ion-padding" color="dark">
+    <ion-card-header color="dark">
+      <ion-card-title>Cursos</ion-card-title>
+    </ion-card-header>
+    <ion-item *ngFor="let p of materias" color="dark">
+      <ion-card color="dark">
+        <img alt="Asignatura img" src="{{p.rutaImg}}" width="300"/>
+        <ion-card-header color="dark">
+          <ion-card-title>{{p.nombreMateria}} {{p.seccion}}</ion-card-title>
+          <ion-card-subtitle>Profesor: {{p.docente}}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-button expand="block" (click)="anadirMateria(p.id)"> Añadir</ion-button>
+      </ion-card>
+    </ion-item>
+  </ion-content>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <img src="assets/img/footer.png" />
+  </ion-toolbar>
+</ion-footer>

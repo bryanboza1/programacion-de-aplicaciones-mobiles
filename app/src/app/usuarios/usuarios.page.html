@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" >
+      <ion-back-button [routerLink]="['/index']" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Listado de cursos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-card color="dark">
+    <ion-card-header>
+      <ion-card-title align="center" >Cursos inscritos</ion-card-title>
+      <center><p>Refrescar página para ver datos :)</p></center>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-item *ngFor="let p of AsignaturaAsociada" color="dark">
+    <ion-card>
+      <img alt="Asignatura img" src="{{p.rutaImg}}" width="300"/>
+      <ion-card-header>
+        <ion-card-title>{{p.materia}}{{p.nombreMateria}}</ion-card-title>
+        <ion-card-subtitle>Profesor: {{p.nombreProfesor}}{{p.docente}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-button expand="block" [routerLink]="['/index']">Tomar asistencia</ion-button>
+    </ion-card>
+  </ion-item>
+</ion-content>
+
+
+<ion-footer color="dark">
+  <ion-toolbar color="dark">
+    <img src="assets/img/footer.png" />
+  </ion-toolbar>
+</ion-footer>
+

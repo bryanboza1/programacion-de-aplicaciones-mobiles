@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" >
+      <ion-back-button [routerLink]="['/profesor']" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>QR Generado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark" [style.visibility]="content_visibility">
+  <ion-toolbar color="secondary">
+    <ion-title style="color: black;">Ingenieria</ion-title>
+  </ion-toolbar>
+ <p class="titulo"><sub> "QR" generado exitosamente</sub></p>
+
+
+  <ion-card class="ion-text-center" color="dark">
+    <qrcode [qrdata]="qrString" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+  </ion-card>
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <img src="assets/img/footer.png" />
+  </ion-toolbar>
+</ion-footer>

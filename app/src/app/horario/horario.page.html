@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" >
+      <ion-back-button [routerLink]="['/index']" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Horario del dia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark" [style.visibility]="content_visibility">
+  <ion-toolbar color="secondary">
+    <ion-title style="color: black;">Ingenieria en informatica</ion-title>
+  </ion-toolbar>
+
+ <p class="titulo">Fecha: {{ fechaCorta.substr(0,10) }} </p>
+ <p class="titulo"><sub>escanee codigo "QR" para marcar la asistencia</sub></p>
+
+
+
+<div *ngIf="scannedResult; else noscan">
+  <ion-card>
+    <ion-item color="primary">
+      <ion-label>programacion<br><sub>12:00 pm / 13:30 pm</sub></ion-label>
+      <ion-icon slot="end" name="checkmark-done-outline"></ion-icon>
+      <p>asistencia tomada</p>
+    </ion-item>
+  </ion-card>
+</div>
+
+<ng-template #noscan>
+  <ion-card>
+    <ion-item color="primary">
+      <ion-label>programacion<br><sub>12:00 pm / 13:30 pm</sub></ion-label>
+      <ion-button  slot="end" color="warning" (click)="startScan()">QR</ion-button>
+    </ion-item>
+  </ion-card>
+</ng-template>
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar color="dark">
+    <img src="assets/img/footer.png" />
+  </ion-toolbar>
+</ion-footer>

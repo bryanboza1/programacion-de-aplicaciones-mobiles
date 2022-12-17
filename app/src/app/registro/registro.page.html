@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" >
+      <ion-back-button [routerLink]="['/login']" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-card color="dark">
+    <form >
+      <div class="m-100 h-100 pt-5 bg-light ">
+
+        <div class="titulo text-center" >Ingresa tus datos</div>
+        <ion-card-content color="dark">                   
+          <div class="tipografia">
+            <!--INPUTS-->
+            <div class="form-control mb-2">
+            <ion-item color="dark">
+              <ion-label position="floatingInput">Nombres: </ion-label>
+              <ion-input #nombre type="text"  placeholder="Ej: Juan" required></ion-input>
+              <ion-input #nombre2 type="text"  placeholder="Ej: Luis" required></ion-input>
+            </ion-item>
+            </div>
+            <div class="form-control mb-2">
+            <ion-item color="dark">
+              <ion-label position="floatingInput">Apellidos: </ion-label>
+              <ion-input #apellido type="text"   placeholder="Ej: Tapia" required></ion-input>
+              <ion-input #apellido2 type="text"  placeholder="Ej: Ortiz" required></ion-input>
+            </ion-item>
+            </div>
+           
+            <div class="form-control mb-2">
+            <ion-item color="dark">
+              <ion-label position="floatingInput">Run: </ion-label>
+              <ion-input #run type="text"  placeholder="Ej: 10020030-K" required></ion-input>
+            </ion-item>
+            </div>
+            <div class="form-control mb-2">
+              <ion-item color="dark">
+              <ion-label position="floatingInput">E-mail: </ion-label>
+              <ion-input #email   placeholder="Ej: usuario1@duocuc.cl" required></ion-input>
+            </ion-item>
+            </div>
+            <div class="form-control mb-2">
+              <ion-item color="dark">
+              <ion-label position="floatingInput">Contraseña: </ion-label>
+              <ion-input #pass type="password"   required></ion-input>
+            </ion-item>
+            </div>
+            <div class="form-control mb-2">
+              <ion-item color="dark">
+              <ion-label position="floatingInput">Tipo usuario: </ion-label>
+              <ion-input required #tipo placeholder="Alumno o Profesor"></ion-input>
+            </ion-item>
+            </div>
+            <div class="form-control mb-2">
+              <ion-item color="dark">
+              <ion-label position="floatingInput">Cantidad asignaturas: </ion-label>
+              <ion-input #asignaturas type="number"  required ></ion-input>
+            </ion-item>
+            </div>
+
+            <!--BUTTON-->
+            <div class="d-flex justify-content-center">
+              <ion-button  type="submit" expand="block" color="warning" 
+              (click)="registro(nombre,nombre2,apellido,apellido2,run,email,pass,tipo,asignaturas)"><span class="text-center text-white fw-bold">Enviar</span></ion-button>
+            </div>  
+          </div>
+
+        </ion-card-content>
+      </div>
+    </form>
+  </ion-card>
+
+
+</ion-content>
+
+
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <img src="assets/img/footer.png" />
+  </ion-toolbar>
+</ion-footer>

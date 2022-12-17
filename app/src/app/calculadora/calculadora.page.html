@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>calculadora</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+Numero 1 <input type="number" #numero1 id="numero1"> <br>
+Numero 2 <input type="number" #numero2 id="numero2"> <br>
+Resultado <input type="number" #resultado id="resultado"> <br>
+<br>
+<br>
+Opciones
+<ion-col size="3">
+  <ion-button id="btnsuma" (click)="sumar(numero1.value, numero2.value)">
+    <ion-icon slot="icon-only" name="add"></ion-icon>
+  </ion-button>
+  
+</ion-col>
+
+</ion-content>

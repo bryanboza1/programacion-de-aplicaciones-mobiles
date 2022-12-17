@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="background-color:#012C56 ;" ><img src="assets/img/logo.png" /></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="dark">  
+<ion-item color="medium">
+  <ion-avatar slot="start">
+    <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+  </ion-avatar>
+  <ion-label style="color: white;">Bienvenido  profesor<p>{{ user }}</p></ion-label>
+</ion-item>
+<p class="titulo"><sub>Genere un codigo "QR" para marcar la asistencia</sub></p>
+
+
+<ion-card>
+  <ion-item color="primary" >
+    <ion-label>Programacion De aplicaciónes moviles 002d<br><sub>12:00 pm / 13:30 pm</sub></ion-label>
+    <ion-button  slot="end" color="warning" (click)="generar()">Generar QR</ion-button>
+  </ion-item>
+</ion-card>
+
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<ion-button expand="block" color="warning" shape="round" (click)="logout()"><ion-icon slot="end" name="log-out-outline"></ion-icon>cerrar sesion</ion-button>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <img src="assets/img/footer.png" />
+  </ion-toolbar>
+</ion-footer>

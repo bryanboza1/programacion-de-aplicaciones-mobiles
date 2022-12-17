@@ -1,0 +1,72 @@
+{
+  "personas": [
+    {
+      "nombre": "bryan alejandro",
+      "apellido": "boza valenzuela",
+      "run": "20945267-7",
+      "email": "br.boza@duocuc.cl",
+      "pass": "1234",
+      "tipo": "Alumno",
+      "materias": 1,
+      "id": 1
+    },
+    {
+      "nombre": "Patricio",
+      "apellido": "yanes",
+      "run": "123456789",
+      "email": "pato@gmail.com",
+      "pass": "profe",
+      "tipo": "Docente",
+      "materias": 2,
+      "id": 2
+    }
+  ],
+  "materias": [
+    {
+      "id": 1,
+      "nombreAsignatura": "Programacion",
+      "seccion": "001D",
+      "runProfesor": "15023995-2",
+      "docente": "Emilio Carlos Roman Borrego",
+      "capacidad": 29,
+      "rutaImg": "https://www.aauniv.com/s/blog/wp-content/uploads/2022/03/lenguajes-de-programacion-1024x572.jpeg"
+    },
+    {
+      "id": 2,
+      "nombreAsignatura": "Programacion De aplicaciónes moviles",
+      "seccion": "002D",
+      "runProfesor": "12087195-2",
+      "docente": "Patricio Yanes",
+      "capacidad": 29,
+      "rutaImg": "https://www.claseejecutiva.uc.cl/wp-content/uploads/2018/01/programacion-ritmica-como-planificar-proyectos-de-construccion-con-actividades-repetitivasOK-min-thegem-blog-timeline-large.jpg"
+    }
+  ],
+  "materiaAsociada": [
+    {
+      "idAsignatura": "1",
+      "runAlumno": "21010821-1",
+      "nombreAlumno": "Vicente Salomon madriaga campos",
+      "nombreProfesor": "Emilio Carlos Roman Borrego",
+      "asignatura": "Programacion 001D",
+      "rutaImg": "https://www.aauniv.com/s/blog/wp-content/uploads/2022/03/lenguajes-de-programacion-1024x572.jpeg",
+      "id": 2
+    },
+    {
+      "idAsignatura": "1",
+      "runAlumno": "20945267-7",
+      "nombreAlumno": "bryan alejandro boza valenzuela",
+      "nombreProfesor": "Emilio Carlos Roman Borrego",
+      "asignatura": "Programacion 001D",
+      "rutaImg": "https://www.aauniv.com/s/blog/wp-content/uploads/2022/03/lenguajes-de-programacion-1024x572.jpeg",
+      "id": 3
+    }
+  ],
+  "asistencia": [
+    {
+      "fecha": "2022-12-10T23:17:50.652Z",
+      "asistencia": "confirmada",
+      "idusuario": 1,
+      "id": 2
+    }
+  ]
+}

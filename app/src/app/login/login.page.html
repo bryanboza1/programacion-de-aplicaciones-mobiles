@@ -1,0 +1,55 @@
+<ion-header [translucent]="true" color="primary">
+  <ion-toolbar style="background-color:#012C56 ;" color="primary">
+    <img style="background-color:#012C56 ;" src="assets/img/logo.png" />
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="dark">
+<div id="container">
+
+
+<ion-card color="dark">
+  <ion-card-header>
+
+  </ion-card-header>
+  <ion-card-content>
+    <div class="border-bottom border-secondary">
+      <form >
+      <!--NOMBRE-->
+      <div class="form-control mb-2">
+        <ion-item color="dark">
+          <ion-label position="floatingInput">Usuario: </ion-label>
+          <ion-input type="text" placeholder="Ej: correo@duoc.cl" #email  [(ngModel)]="nombre" [ngModelOptions]="{standalone: true}" ></ion-input>
+        </ion-item>
+      </div>
+      <!--CONTRASEÑA-->  
+      <div class="form-control mb-2">
+        <ion-item color="dark">
+          <ion-label position="floatingInput">Contraseña: </ion-label>
+          <ion-input  type="password" #password ></ion-input>
+        </ion-item>
+      </div>
+      <!--BOTON-->
+      <ion-button  (click)="login(email,password)"   color="primary">
+        <ion-icon name="log-in-outline" slot="end"></ion-icon>
+        Ingresar
+      </ion-button>
+      <div *ngIf="error;">
+        <h3 id="dato">dato: {{dato}}</h3>
+      </div>
+    
+    </form>
+    </div>
+  </ion-card-content>
+</ion-card>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+    <p class="titulo"  [routerLink]="['/registro']"><sub>¿No tienes cuenta REGISTRATE?</sub></p>
+
+</div>
+
+</ion-content>
